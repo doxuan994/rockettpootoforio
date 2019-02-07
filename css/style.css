@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
 body {
     color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
+    font-family: 'Karla', Helvetica, Arial, sans-serif;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -60,14 +60,14 @@ main {
     grid-area: main;
 }
 /* section {
-    grid-area: section;
+grid-area: section;
 } */
 /* Remove aside because do not needed yet */
 /* aside {
-    grid-area: aside;
+grid-area: aside;
 } */
 /* nav {
-    grid-area: nav;
+grid-area: nav;
 } */
 footer {
     grid-area: footer;
@@ -90,10 +90,10 @@ header {
     background: url("../img/rocket.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 /* For bigger scren styles */
@@ -101,13 +101,10 @@ header {
     .site-icon {
         width: 100px;
         height: 100px;
-        /* position: absolute;
-        top: 30px; */
+        position: absolute;
+        top: 15px;
     }
 }
-
-
-
 
 /* ------------------------------------------------------
 Navigation Styles
@@ -118,24 +115,36 @@ ul {
     padding: 0;
     background: #333;
 }
+li {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.dropdown-menu label {
+    font-weight: bold;
+}
 /* For bigger scren styles */
 @media screen and (min-width: 760px) {
     li {
         display: inline-block;
         padding: 12px;
-        font-size: 12px;
-        text-transform: uppercase;
     }
-    label {
+    .site-navigation a {
+        font-size: 20px;
+    }
+    .dropdown-menu label {
         display: none;
     }
 }
-li:hover {
-    background-color: rgba(255,255,255,0.5);
+.site-navigation a:hover {
+    color: rgb(255,220,119);
 }
-a {
+.site-navigation a {
+    font-weight: bold;
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s linear;
+    -webkit-transition: color 0.3s linear;
+    -moz-transition: color 0.3s linear;
 }
 
 /* Dropdown menu for smaller screen */
@@ -147,21 +156,25 @@ input#menu {
     .site-navigation {
         max-height: 0;
         overflow: hidden;
+        text-align: right;
     }
     .dropdown-menu label {
         display: block;
         cursor: pointer;
-        background: url("../img/001-menu.png") no-repeat left center;
-        padding: 15px 0 15px 40px;
+        padding: 20px 0 20px 40px;
+        background: url("../img/002-menu-1.png") no-repeat left center;
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
     }
     /* Toggle effect */
     input:checked ~ label {
-        background: url("../img/002-x-mark.png") no-repeat left center;
+        background: url("../img/001-error.png") no-repeat left center;
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
     }
     input:checked ~ .site-navigation {
         max-height: 100%;
     }
-
 }
 
 /* ------------------------------------------------------
