@@ -31,6 +31,9 @@ CSS Grid Layout Styles
     /* There is not need to add more rows to the grid-template-areas because they will automatically increase when we added content. */
     grid-template-areas:
     "header header header header"
+    "banner banner banner banner"
+    "banner banner banner banner"
+    "banner banner banner banner"
     "main main main main"
     "main main main main"
     "footer footer footer footer";
@@ -43,7 +46,7 @@ CSS Grid Layout Styles
         grid-auto-rows: minmax(100px, auto);
         /* grid-gap: 50px; */
         /* grid-column-gap: 50px; */
-        grid-row-gap: 20px;
+        /* grid-row-gap: 20px; */
         /* Remove the max-width for full page display */
         /* max-width: 960px; */
         margin: 0 auto;
@@ -51,6 +54,10 @@ CSS Grid Layout Styles
         /* Make better main to display more content */
         grid-template-areas:
         "header header header header header header header header header header header header"
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
         "main main main main main main main main main main main main"
         "main main main main main main main main main main main main"
         "main main main main main main main main main main main main"
@@ -65,9 +72,9 @@ header {
 main {
     grid-area: main;
 }
-/* section {
-grid-area: section;
-} */
+#banner {
+    grid-area: banner;
+}
 /* Remove aside because do not needed yet */
 /* aside {
 grid-area: aside;
@@ -187,6 +194,16 @@ input#menu {
         max-height: 100%;
     }
 }
+
+/* -----------------------------------------------------------------------------
+Banner
+----------------------------------------------------------------------------- */
+#banner {
+    background-image: linear-gradient(to bottom right, darkslateblue, goldenrod);
+}
+
+
+
 /* -----------------------------------------------------------------------------
 Main
 ----------------------------------------------------------------------------- */
